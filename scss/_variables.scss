@@ -1,0 +1,34 @@
+$color-primario: #fafafa;
+$color-footer: #26272b;
+$color-twitter: #1da1f2;
+$color-instagram: #d6249f;
+$color-facebook: #1769ff;
+
+@mixin flex-column-justify-align-centered{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-column-align-centered {
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-center {
+    display: center;
+    justify-content: center;
+    align-items: center;
+}
