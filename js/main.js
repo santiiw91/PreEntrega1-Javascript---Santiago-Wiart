@@ -2,15 +2,23 @@
 
 // Creamos un array de objetos con los productos disponibles y sus precios
 let productosDisponibles = [
-    { nombre: "chaqueta", precio: 1000 },
-    { nombre: "delantal", precio: 2000 },
-    { nombre: "accesorio", precio: 1000 },
+    { nombre: "chaqueta de chef manga larga", precio: 8000 },
+    { nombre: "chaqueta de chef manga larga mujer", precio: 8000 },
+    { nombre: "chaqueta de chef manga corta mujer", precio: 6500 },
+    { nombre: "chaqueta de chef manga corta hombre", precio: 6500 },
+    { nombre: "delantal pechera clasico con regulador", precio: 5000 },
+    { nombre: "delantal jean negro", precio: 7000 },
+    { nombre: "delantal de cintura bengalina", precio: 4000 },
+    { nombre: "micro soplete a gas", precio: 8000 },
+    { nombre: "ahumador lacor instant con campana", precio: 12000 },
+    { nombre: "balanza digital para cocina", precio: 2000 },
+    { nombre: "funda de cuchillos 17 piezas", precio: 7500 },
 ];
 
 // Definimos la función para aplicar descuentos
 function aplicarDescuento(cantidad, total) {
     let descuento = 0;
-     // Si se compró al menos cantidad productos y el total de la venta supera cantidad * 100, se aplica un descuento del 5%
+    // Si se compró al menos cantidad productos y el total de la venta supera cantidad * 100, se aplica un descuento del 5%
     if (cantidad <= productosDisponibles.length && total >= cantidad * 100) {
         descuento = 0.05 * total;
     }
@@ -28,7 +36,7 @@ function realizarVenta() {
         if (producto === "fin") {
             break;
         }
-// Buscamos el producto en el array de objetos y lo agregamos al carrito con su precio
+        // Buscamos el producto en el array de objetos y lo agregamos al carrito con su precio
         let productoEncontrado = productosDisponibles.find(
             (p) => p.nombre === producto
         );
@@ -42,12 +50,12 @@ function realizarVenta() {
             alert("Cantidad no válida");
             continue;
         }
-// Agregamos el producto al carrito con su precio
+        // Agregamos el producto al carrito con su precio
         carrito.push({ producto: productoEncontrado, cantidad });
         totalVenta += productoEncontrado.precio * cantidad;
     }
 
-// Calculamos el descuento utilizando la función de orden superior "aplicarDescuento"
+    // Calculamos el descuento utilizando la función de orden superior "aplicarDescuento"
     let descuento = aplicarDescuento(carrito.length, totalVenta);
     let totalConDescuento = totalVenta - descuento;
 
