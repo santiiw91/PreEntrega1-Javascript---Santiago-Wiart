@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Carrito de compras - BANG</title>
+</head>
+
+<body>
+
+    <section class="carrito">
+        <h1>Productos Disponibles</h1>
+        <ul>
+            <li>Chaqueta de Chef Manga Larga - $7000</li>
+            <li>Chaqueta de Chef Manga Larga Mujer - $7000</li>
+            <li>Chaqueta de Chef Manga Corta Mujer- $6500</li>
+            <li>Chaqueta de Chef Manga Cortra Hombre - $6500</li>
+            <li>Delantal Pechera Clasico con Regulador - $4500</li>
+            <li>Delantal Jean Negro - $4500</li>
+            <li>Delantal de Cintura Bengalina - $4800</li>
+            <li>Delantal de cuero con reguladores- $9500</li>
+            <li>Micro Soplete a Gas- $10500</li>
+            <li>Ahumador Lacor Instant - $15500</li>
+            <li>Balanza Digital - $3500</li>
+            <li>Funda de cuchillos 17 piezas - $12500</li>
+        </ul>
+        <form>
+            <label for="producto">Producto:</label>
+            <select id="producto">
+                <option value="">--Seleccione un producto--</option>
+                <option value="Chaqueta de Chef Manga Larga">Chaqueta de Chef Manga Larga</option>
+                <option value="Chaqueta de Chef Manga Larga Mujer">Chaqueta de Chef Manga Larga Mujer</option>
+                <option value="Chaqueta de Chef Manga Corta Mujer">Chaqueta de Chef Manga Corta Mujer</option>
+                <option value="Chaqueta de Chef Manga Cortra Hombre">Chaqueta de Chef Manga Cortra Hombre</option>
+                <option value="Delantal Pechera Clasico con Regulador">Delantal Pechera Clasico con Regulador</option>
+                <option value="Delantal Jean Negro">Delantal Jean Negro</option>
+                <option value="Delantal de Cintura Bengalina">Delantal de Cintura Bengalina</option>
+                <option value="Delantal de cuero con reguladores">Delantal de cuero con reguladores</option>
+                <option value="Micro Soplete a Gas">Micro Soplete a Gas</option>
+                <option value="Ahumador Lacor Instant">Ahumador Lacor Instant</option>
+                <option value="Balanza Digital">Balanza Digital</option>
+                <option value="Funda de cuchillos 17 piezas">Funda de cuchillos 17 piezas</option>
+
+            </select>
+            <br><br>
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" value="1">
+            <br><br>
+            <button class="btn" type="button" onclick="agregarAlCarrito()">Agregar al Carrito</button>
+        </form>
+        <h2>Carrito de Compras</h2>
+        <div id="carrito"></div>
+        <h3>Total: $<span id="total">0</span></h3>
+        <button class="btn" onclick="borrarLocalStorage()">Borrar</button>
+
+    </section>
+
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
